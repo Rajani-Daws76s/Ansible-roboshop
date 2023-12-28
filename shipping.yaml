@@ -46,7 +46,7 @@
 
   - name: copy shipping service
     ansible.builtin.copy:
-      sre: /shipping.service
+      src: /shipping.service
       dest: /etc/systemd/system/shipping.service
 
   - name: deamon realod and start
