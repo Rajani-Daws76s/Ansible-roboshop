@@ -44,11 +44,10 @@
     args:
       chdir: /app
 
-  - name: copy shipping service
+   - name: copy shipping service
     ansible.builtin.copy:
-      src: /shipping.service
+      src: shipping.service
       dest: /etc/systemd/system/shipping.service
-      remote_src: yes
 
   - name: deamon realod and start
     ansible.builtin.systemd_service:
