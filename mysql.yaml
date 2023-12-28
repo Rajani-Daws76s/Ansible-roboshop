@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: disable old mysql 
-    ansible.builtin.shell: dnf module disable mysql 
+    ansible.builtin.command: dnf module disable mysql -y
 
   - name: copy mysql repo file
     ansible.builtin.copy:
@@ -11,7 +11,7 @@
     dest: /etc/yum.repos.d/mysql.repo
 
   - name: install mysql
-    ansible.builtin.package: dnf install mysql-community-server -y
+    ansible.builtin.package:  
       name: mysql-community-server
       state: present
 
