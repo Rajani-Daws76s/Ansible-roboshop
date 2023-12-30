@@ -28,6 +28,6 @@
 
   - name: create rabitmq user
     ansible.builtin.command: rabbitmqctl add_user roboshop roboshop123
-    ingo
+    i
 
   
