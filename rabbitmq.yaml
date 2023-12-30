@@ -20,7 +20,7 @@
       enabled: yes
 
   - name: creating rabbitmq user
-    community.rabbitmq.rabbitmq_user:
+    community.rabbitmq.rabbitmq_user: #it will not throw any error even if run twice
       user: roboshop
       password: roboshop123
 
