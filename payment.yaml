@@ -1,5 +1,6 @@
 - name: payment app
   hosts: payment
+  become: yes
   tasks: 
   - name: instal python
     ansible.builtin.package:
