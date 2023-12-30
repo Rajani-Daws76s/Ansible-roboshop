@@ -19,9 +19,16 @@
       state: restarted
       enabled: yes
 
+  - name: remove rabitmq user
+    ansible.builtin.user:
+      name: roboshop
+      state: absent
+      remove: yes
+
+
   - name: create rabitmq user
     ansible.builtin.command: rabbitmqctl add_user roboshop roboshop123
-
+    ingo
 
   - name: set permissions
     ansible.builtin.command: rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"
