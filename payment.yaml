@@ -43,7 +43,7 @@
 
   - name: Copy payment service
     ansible.builtin.copy:
-      src: cart.service
+      src: payment.service
       dest: /etc/systemd/system/payment.service
 
   - name: deamon realod and start
@@ -55,3 +55,5 @@
       name: payment
       state: restarted
       enabled: yes
+
+# ignore_errors: true it will ignore the error and continue
